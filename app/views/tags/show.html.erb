@@ -1,0 +1,16 @@
+<h1><%= @tag.name %></h1>
+
+<ul>
+<% @tag.recipes.each do |recipe| %>
+  <li><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></li>
+<% end %>
+</ul>
+
+<a href="/tags/<%= @tag.id %>/edit"><button class="btn btn-warning">Edit this Tag</button></a>
+
+<a href="/tags/<%= @tag.id %>"
+   data-confirm="You sure?"
+   data-method="delete"
+   rel="nofollow"><button class="btn btn-danger">Delete Tag</button></a>
+
+<a href="/tags"><button class="btn btn-primary">Tag Menu</button></a>

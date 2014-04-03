@@ -1,7 +1,7 @@
 <label for="recipe_name">Name</label>
-<input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
+<input id="recipe_name" class="form-control" name="recipe[name]" type="text" value="<%= @recipe.name %>">
 <label for="recipe_content">Content</label>
-<textarea name="recipe[content]" type="text"><%= @recipe.content %></textarea>
+<textarea row="5" name="recipe[content]" class="form-control" type="text"><%= @recipe.content %></textarea>
 
 <% @tags.each do |tag| %>
   <% if @recipe.tags.include?(tag) %>

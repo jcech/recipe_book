@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'jquery-star-rating-rails'
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'
@@ -7,6 +8,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'

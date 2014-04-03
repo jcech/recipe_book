@@ -1,0 +1,11 @@
+<h1>Tags</h1>
+
+<ul>
+  <% @tags.each do |tag| %>
+  <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+  <% end %>
+</ul>
+
+<a href="tags/new"><button class="btn btn-success">Create New tag</button></a>
+
+<a href="recipes"><button class="btn btn-primary">Main Menu</button></a>

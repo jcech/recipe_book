@@ -2,6 +2,24 @@
 
 <p> <%= @recipe.content %> </p>
 
+  <hr>
+  <div class="container">
+      <div class="alert alert-success pull-right hide">
+        <form action="/recipes/<%= @recipe.id %>/ratings" method="post">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        You gave a rating of <span value="value" id="count">0</span> star(s)
+        <input id="score" type="hidden" name="rating[star]" value="score">
+
+      </div>
+      <div class="row">
+      </div>
+      <div class="row lead">
+          <div id="stars" class="starrr"></div>
+      </div>
+     </div>
+        <button class="btn btn-success">Rate</button>
+        </form>
+
 <h3>Tags</h3>
 <ul>
   <% @recipe.tags.each do |tag| %>
@@ -17,3 +35,6 @@
    rel="nofollow"><button class="btn btn-danger">Delete Recipe</button></a>
 
 <a href="/recipes"><button class="btn btn-primary">Recipe Menu</button></a>
+
+<%= javascript_include_tag "bootstrap-rating-input.min.js" %>
+
