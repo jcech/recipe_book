@@ -1,0 +1,12 @@
+<label for="recipe_name">Name</label>
+<input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
+<label for="recipe_content">Content</label>
+<textarea name="recipe[content]" type="text"><%= @recipe.content %></textarea>
+
+<% @tags.each do |tag| %>
+  <% if @recipe.tags.include?(tag) %>
+    <input id="recipe_tag" name="tags_id[]" type="checkbox" checked="checked" value=<%= tag.id %>><%= tag.name %>
+  <% else %>
+    <input id="recipe_tag" name="tags_id[]" type="checkbox" value=<%= tag.id %>><%= tag.name %>
+  <% end %>
+<% end %>
